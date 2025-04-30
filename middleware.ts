@@ -2,7 +2,9 @@ import { NextResponse } from "next/server";
 
 const publicRoutes = ["/", "/api/upload"];
 
-export default function middleware(req) {
+import { NextRequest } from "next/server";
+
+export default function middleware(req: NextRequest) {
   const isPublic = publicRoutes.includes(req.nextUrl.pathname);
   if (!isPublic) {
     return NextResponse.redirect(new URL("/", req.url));
