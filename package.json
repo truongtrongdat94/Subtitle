@@ -10,14 +10,14 @@
     "lib": "lib"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "node scripts/init-dirs.js && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "init-dirs": "node scripts/init-dirs.js"
   },
   "keywords": [],
   "dependencies": {
-    "next": "15.3.1",
     "@clerk/nextjs": "^6.18.0",
     "@ffmpeg/core": "^0.12.10",
     "@ffmpeg/ffmpeg": "^0.12.15",
@@ -31,7 +31,10 @@
     "glob": "^11.0.2",
     "lru-cache": "^11.1.0",
     "lucide-react": "^0.503.0",
+    "next": "15.3.1",
     "node-fetch": "^3.3.2",
+    "plyr": "^3.7.8",
+    "plyr-react": "^5.3.0",
     "react-markdown": "^10.1.0",
     "remark-gfm": "^4.0.1",
     "tailwind-merge": "^3.2.0",
